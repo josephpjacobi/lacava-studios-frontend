@@ -1,0 +1,29 @@
+{
+  "name": "lacava-studios-frontend",
+  "version": "1.0.0",
+  "description": "Front end for LaCavaStudios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephpjacobi/lacava-studios-frontend.git"
+  },
+  "author": "Joseph Jacobi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephpjacobi/lacava-studios-frontend/issues"
+  },
+  "homepage": "https://github.com/josephpjacobi/lacava-studios-frontend#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  }
+}
