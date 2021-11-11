@@ -1,8 +1,0 @@
-{
-	"name": "LaCava Studios Front End",
-	"dockerFile": "Dockerfile",
-	"appPort": [3000],
-	"runArgs": ["-u", "node"],
-	"postCreateCommand": "npm install",
-	"extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
-}

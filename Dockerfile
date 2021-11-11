@@ -6,6 +6,9 @@
   # Th is node container has a CMD command already, but it will be overridden by a CMD in this file
 FROM node:16-stretch
 
+# INSTRUCTION 2: INSTALL NODEMON
+RUN npm i -g nodemon
+
 # INSTRUCTION 2: 
   # The node container above comes with a node user to prevent root user level access
   # This "node" is not equal to the node from above, it references a user group within that container
@@ -14,14 +17,14 @@ USER node
 # INSTRUCTION 3: create a directory, UNDER THE node USER, for your working directory
   # This step will prevent permission errors, because solely running instruction 4 without instruction 3 creates the folder under the root user
   # We will not have access to the root owned folder without INSTRUCTION 3
-RUN mkdir /home/node/frontend-code
+RUN mkdir /home/node/lacava-frontend
 
 # INSTRUCTION 4: Copy from source to destination
   # This is the home directory of the node user ("/home/node")
   # I am adding the frontend-code directory on the fly
   # all commands after this will be based in this directory
     # WORKDIR will create a directory if it does not exist
-WORKDIR /home/node/frontend-code
+WORKDIR /home/node/lacava-frontend
 
 
 # INSTRUCTION 5: copy the package-lock and package.json into the working dir
@@ -42,7 +45,7 @@ RUN npm ci
     # ". ." = "Everything from here goes into everything over there"
 COPY --chown=node:node . .
 
-
+CMD ["npm", "start"]
 
 
 # NOTES 

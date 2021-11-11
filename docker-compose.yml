@@ -1,0 +1,29 @@
+version: "3"
+# This is going to specify all containers that we want docker to spin up
+services:
+    web:
+        # Specify where the Dockerfile is
+        # It will automatically look for a DockerFile
+        build: .
+        # What ports I care about
+        ports:
+            - "3000:3000"
+        # connect our code, this is specified in the DockerFile witht he WORKDIR instruction
+        # This will mount our code
+        # "Our code exists at...."
+        # Treat node_modules seperately
+        volumes:
+            - .:/home/node/lacava-frontend
+            - /home/node/lacava-frontend/node_modules
+        # This will link other containers, i'm not sure what to link the front end to...
+        # links:
+        #     - db
+        # environment:
+        #   PG_CONNECTION_STING: "CONNECTION STRING HERE"
+        #
+        # ------- "DO THIS FOR ALL MICROSERVICES, FRONTENDS, CONTAINERS THAT YOU ARE BUILDING AND STARTING UP"
+        #
+    # Point db to which image you want to run
+    # IMAGE FROM POSTGRES
+    # db:
+    #   image: mongo:3
