@@ -1,7 +1,7 @@
 version: "3"
 # This is going to specify all containers that we want docker to spin up
 services:
-    web:
+    lacava_fe:
         # Specify where the Dockerfile is
         # It will automatically look for a DockerFile
         build: .
