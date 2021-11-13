@@ -20,5 +20,13 @@ body {
 	font-size: 1.5em;
 }
 
+/* The values set in previous media queries will carry over into the next media query if they are not overriden */
+/* I guess everything before 550px is considered mobile */
+
+/* for any screens that are 550px or wider (TABLET MEDIA QUERY) */
+@media (min-width: 550px) {
+}
+
+/* this is our media query for any screen thats 800px or wider (DESKTOP MEDIA QUERY) */
 @media (min-width: 800px) {
 }
