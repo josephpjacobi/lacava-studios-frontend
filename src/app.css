@@ -1,0 +1,16 @@
+/* Setting up the border box model */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* turn off margin and padding, also setting font and size for the page */
+body {
+	font-family: Arial, sans-serif;
+}
