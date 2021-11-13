@@ -1,9 +1,11 @@
 /* Setting up the border box model */
+/* Using the border box method calculates the value of a contents width including the padding and the margin. */
 
 html {
 	box-sizing: border-box;
 }
 
+/* All elements before and after inherit box-sizing */
 *,
 *::before,
 *::after {
@@ -13,4 +15,7 @@ html {
 /* turn off margin and padding, also setting font and size for the page */
 body {
 	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
 }
