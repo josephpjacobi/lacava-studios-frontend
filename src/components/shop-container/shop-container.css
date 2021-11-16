@@ -1,0 +1,17 @@
+/* MOBILE DIMENTIONS */
+
+.shop-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid black;
+}
+
+/* TABLET DIMENTIONS */
+@media (min-width: 550px) {
+}
+
+/* DESKTOP DIMENTIONS */
+@media (min-width: 800px) {
+}
