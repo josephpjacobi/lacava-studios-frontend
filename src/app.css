@@ -23,10 +23,14 @@ body {
 /* The values set in previous media queries will carry over into the next media query if they are not overriden */
 /* I guess everything before 550px is considered mobile */
 
+/* MOBILE DIMENTIONS */
+
 /* for any screens that are 550px or wider (TABLET MEDIA QUERY) */
+/* TABLET DIMENTIONS */
 @media (min-width: 550px) {
 }
 
 /* this is our media query for any screen thats 800px or wider (DESKTOP MEDIA QUERY) */
+/* DESKTOP DIMENTIONS */
 @media (min-width: 800px) {
 }
