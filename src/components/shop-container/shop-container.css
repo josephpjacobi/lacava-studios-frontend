@@ -2,10 +2,27 @@
 
 .shop-section {
 	display: flex;
+	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-
 	border: 1px solid black;
+	padding: 25px;
+}
+
+.shop-title {
+	margin: 10px 0px;
+}
+
+.shop-container {
+	display: flex;
+	flex-flow: row wrap;
+	border: 1px solid black;
+	width: 100%;
+	height: auto;
+}
+
+.product {
+	flex-basis: 90%;
 }
 
 /* TABLET DIMENTIONS */
