@@ -2,11 +2,6 @@ import React from "react";
 import "./shop-container.css";
 
 export const ShopContainer = () => {
-	// this needs to be async
-	// const fetchProductsForSale = () => {
-	// 	// fetch products
-	// };
-
 	return (
 		<div className="shop-section">
 			<h1 className="shop-title">Shop</h1>
