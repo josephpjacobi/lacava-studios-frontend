@@ -44,6 +44,7 @@
 @media (min-width: 550px) {
 	.product {
 		flex-basis: 40%;
+		flex-flow: row nrap;
 	}
 }
 
@@ -51,5 +52,6 @@
 @media (min-width: 800px) {
 	.product {
 		flex-basis: 20%;
+		flex-flow: row wrap;
 	}
 }
