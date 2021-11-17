@@ -19,6 +19,7 @@
 	justify-content: center;
 	align-items: center;
 	border: 1px solid black;
+	border-radius: 10px;
 	width: 100%;
 	height: auto;
 	padding: 5px;
@@ -36,6 +37,7 @@
 
 .product img {
 	flex-basis: 90%;
+	border-radius: 10px;
 }
 
 /* TABLET DIMENTIONS */
