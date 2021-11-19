@@ -10,6 +10,7 @@ export const Product = () => {
 			/>
 			<p>Product 1 Name</p>
 			<p>$500</p>
+			<button type="button">Add to Cart</button>
 		</div>
 	);
 };

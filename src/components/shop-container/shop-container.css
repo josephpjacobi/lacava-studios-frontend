@@ -26,12 +26,12 @@
 }
 
 /* TABLET DIMENTIONS */
-@media (min-width: 550px) {
+@media screen and (min-width: 550px) {
 	.shop-container {
 		justify-content: space-evenly;
 	}
 }
 
 /* DESKTOP DIMENTIONS */
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
 }

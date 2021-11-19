@@ -8,6 +8,7 @@
 	border: 1px solid black;
 	border-radius: 10px;
 	margin: 5px;
+	padding: 0px 0px 5px 0px;
 }
 
 .product img {
@@ -16,14 +17,14 @@
 }
 
 /* TABLET DIMENTIONS */
-@media (min-width: 550px) {
+@media screen and (min-width: 550px) {
 	.product {
 		flex-basis: 40%;
 	}
 }
 
 /* DESKTOP DIMENTIONS */
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
 	.product {
 		flex-basis: 20%;
 	}
