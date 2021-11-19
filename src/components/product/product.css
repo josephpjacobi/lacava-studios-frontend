@@ -1,0 +1,30 @@
+/* MOBILE DIMENTIONS */
+
+.product {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	flex-basis: 90%;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 5px;
+}
+
+.product img {
+	flex-basis: 75%;
+	border-radius: 10px;
+}
+
+/* TABLET DIMENTIONS */
+@media (min-width: 550px) {
+	.product {
+		flex-basis: 40%;
+	}
+}
+
+/* DESKTOP DIMENTIONS */
+@media (min-width: 800px) {
+	.product {
+		flex-basis: 20%;
+	}
+}
