@@ -20,7 +20,7 @@
 	align-items: center;
 	border: 1px solid black;
 	border-radius: 10px;
-	width: 100%;
+	flex-basis: 100%;
 	height: auto;
 	padding: 5px;
 }
@@ -36,7 +36,7 @@
 }
 
 .product img {
-	flex-basis: 90%;
+	flex-basis: 75%;
 	border-radius: 10px;
 }
 
@@ -44,7 +44,6 @@
 @media (min-width: 550px) {
 	.product {
 		flex-basis: 40%;
-		flex-flow: row nrap;
 	}
 }
 
@@ -52,6 +51,5 @@
 @media (min-width: 800px) {
 	.product {
 		flex-basis: 20%;
-		flex-flow: row wrap;
 	}
 }
