@@ -9,7 +9,6 @@ interface CartItem {
 
 export default function App() {
 	const [activeTab, setActiveTab] = useState("Shop Container");
-	// const [cart, setCart] = useState([]);
 	const cart: Array<CartItem> = [];
 
 	const items = [

@@ -26,6 +26,15 @@ body {
 	align-items: center;
 }
 
+.cart-section {
+}
+
+.cart-title {
+}
+
+.cart-container {
+}
+
 /* The values set in previous media queries will carry over into the next media query if they are not overriden */
 /* I guess everything before 550px is considered mobile */
 
