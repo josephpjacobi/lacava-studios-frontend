@@ -1,10 +1,8 @@
-import React from 'react';
-import { CartItem } from '../../app';
-import "./cart-item.css"
+import React from "react";
+import { CartItem } from "../../app";
+import "./cart-item.css";
 
-// this needs to be changed
-export const CartItemDisplay = ({ id, description}: CartItem) => {
-  return (
-
-  )
-}
+// CartItemDisplay component name needs to be changed
+export const CartItemDisplay = ({ description }: CartItem) => (
+	<div className="cart-item-container">{description}</div>
+);

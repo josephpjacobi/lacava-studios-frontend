@@ -1,5 +1,6 @@
 import React from "react";
 import { CartItem } from "../../app";
+import { CartItemDisplay } from "../cart-item/cart-item";
 import "./cart-container.css";
 
 interface CartContainerProps {
@@ -32,7 +33,11 @@ export const CartContainer = ({ activeTab, cartItems }: CartContainerProps) => {
 				) : (
 					cartItems.map((cartItem) => {
 						return (
-							<div key={cartItem.id}>{cartItem.description}</div>
+							<CartItemDisplay
+								key={cartItem.id}
+								id={cartItem.id}
+								description={cartItem.description}
+							/>
 						);
 					})
 				)}

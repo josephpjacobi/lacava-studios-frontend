@@ -1,0 +1,16 @@
+/* MOBILE DIMENTIONS */
+.cart-item-container {
+	display: flex;
+	flex-basis: 90%;
+	border: 1px solid blue;
+	padding: 20px;
+	margin: 5px;
+}
+
+/* TABLET DIMENTIONS */
+@media screen and (min-width: 550px) {
+}
+
+/* DESKTOP DIMENTIONS */
+@media screen and (min-width: 800px) {
+}
