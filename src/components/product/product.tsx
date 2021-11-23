@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
+import { CartItem } from "../../app";
 import "./product.css";
 
-export const Product = () => {
+interface ProductProps {
+	setCartItems: Dispatch<SetStateAction<CartItem[]>>;
+}
+
+export const Product = ({ setCartItems }: ProductProps) => {
 	return (
 		<div className="product">
 			<img
@@ -10,7 +15,14 @@ export const Product = () => {
 			/>
 			<p>Product 1 Name</p>
 			<p>$500</p>
-			<button type="button">Add to Cart</button>
+			<button
+				type="button"
+				onClick={() =>
+					setCartItems([{ id: 1, description: "new product!" }])
+				}
+			>
+				Add to Cart
+			</button>
 		</div>
 	);
 };

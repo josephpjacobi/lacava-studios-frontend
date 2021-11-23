@@ -10,7 +10,13 @@ export interface CartItem {
 
 export default function App() {
 	const [activeTab, setActiveTab] = useState("Shop Container");
-	const [cartItems, setCartItems] = useState<Array<CartItem>>([]);
+	const [cartItems, setCartItems] = useState<Array<CartItem>>([
+		{ id: 1, description: "test product 1" },
+		{ id: 2, description: "test product 2" },
+		{ id: 3, description: "test product 3" },
+		{ id: 4, description: "test product 4" },
+		{ id: 5, description: "test product 5" },
+	]);
 
 	return (
 		<div className="App">
@@ -26,7 +32,7 @@ export default function App() {
 					Cart {cartItems.length}
 				</h1>
 			</nav>
-			<ShopContainer activeTab={activeTab} />
+			<ShopContainer activeTab={activeTab} setCartItems={setCartItems} />
 			<CartContainer activeTab={activeTab} cartItems={cartItems} />
 		</div>
 	);
