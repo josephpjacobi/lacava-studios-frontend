@@ -18,6 +18,15 @@ export default function App() {
 		{ id: 5, description: "test product 5" },
 	]);
 
+	// function handleCartItems(cartItemToAddOrRemove: CartItem, ) {
+	// 	const copyOfCartState = { ...cartItems };
+	// }
+	function addItemToCart(itemToAdd: CartItem) {
+		const copyOfCartState = [...cartItems];
+		copyOfCartState.push(itemToAdd);
+		setCartItems(copyOfCartState);
+	}
+
 	return (
 		<div className="App">
 			<button
@@ -32,7 +41,12 @@ export default function App() {
 					Cart {cartItems.length}
 				</h1>
 			</nav>
-			<ShopContainer activeTab={activeTab} setCartItems={setCartItems} />
+			<ShopContainer
+				activeTab={activeTab}
+				addItemToCart={addItemToCart}
+				// setCartItems={setCartItems}
+				// addItemToCart={addItemToCart}
+			/>
 			<CartContainer activeTab={activeTab} cartItems={cartItems} />
 		</div>
 	);

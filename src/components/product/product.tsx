@@ -1,12 +1,12 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { CartItem } from "../../app";
 import "./product.css";
 
 interface ProductProps {
-	setCartItems: Dispatch<SetStateAction<CartItem[]>>;
+	addItemToCart: (itemToAdd: CartItem) => void;
 }
 
-export const Product = ({ setCartItems }: ProductProps) => {
+export const Product = ({ addItemToCart }: ProductProps) => {
 	return (
 		<div className="product">
 			<img
@@ -18,7 +18,7 @@ export const Product = ({ setCartItems }: ProductProps) => {
 			<button
 				type="button"
 				onClick={() =>
-					setCartItems([{ id: 1, description: "new product!" }])
+					addItemToCart({ id: 1, description: "new product!" })
 				}
 			>
 				Add to Cart

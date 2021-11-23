@@ -1,16 +1,18 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { Product } from "../product/product";
 import { CartItem } from "../../app";
 import "./shop-container.css";
 
 interface ShopContainerProps {
 	activeTab: string;
-	setCartItems: Dispatch<SetStateAction<CartItem[]>>;
+	// setCartItems: Dispatch<SetStateAction<CartItem[]>>;
+	addItemToCart: (itemToAdd: CartItem) => void;
 }
 
 export const ShopContainer = ({
 	activeTab,
-	setCartItems,
+	// setCartItems,
+	addItemToCart,
 }: ShopContainerProps) => {
 	return (
 		<div
@@ -21,11 +23,11 @@ export const ShopContainer = ({
 		>
 			<h1 className="shop-title">Shop</h1>
 			<div className="shop-container">
-				<Product setCartItems={setCartItems} />
-				<Product setCartItems={setCartItems} />
-				<Product setCartItems={setCartItems} />
-				<Product setCartItems={setCartItems} />
-				<Product setCartItems={setCartItems} />
+				<Product addItemToCart={addItemToCart} />
+				<Product addItemToCart={addItemToCart} />
+				<Product addItemToCart={addItemToCart} />
+				<Product addItemToCart={addItemToCart} />
+				<Product addItemToCart={addItemToCart} />
 			</div>
 		</div>
 	);
