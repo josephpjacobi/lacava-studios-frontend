@@ -24,13 +24,11 @@ export default function App() {
 
 	return (
 		<div className="App">
-			<button
-				style={{ display: "none" }}
-				onClick={() => setActiveTab("")}
-			></button>
 			<nav className="nav-bar">
-				<h1>LaCava Studios</h1>
-				<h1>Cart {cart.length}</h1>
+				<h1 onClick={() => setActiveTab("Shop Container")}>
+					LaCava Studios
+				</h1>
+				<h1 onClick={() => setActiveTab("Cart")}>Cart {cart.length}</h1>
 			</nav>
 			<ShopContainer activeTab={activeTab} />
 			<div
