@@ -41,6 +41,10 @@ export const CartContainer = ({ activeTab, cartItems }: CartContainerProps) => {
 						);
 					})
 				)}
+				<div className="checkout-section">
+					<h4>Total: TOTAL</h4>
+					<button>Checkout</button>
+				</div>
 			</div>
 		</div>
 	);

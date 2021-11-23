@@ -25,6 +25,16 @@
 	padding: 5px;
 }
 
+.checkout-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: gray;
+	flex-basis: 100%;
+	padding: 10px;
+	border-radius: 10px;
+}
+
 /* TABLET DIMENTIONS */
 @media screen and (min-width: 550px) {
 	.cart-container {
