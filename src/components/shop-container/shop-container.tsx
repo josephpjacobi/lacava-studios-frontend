@@ -22,13 +22,11 @@ export const ShopContainer = ({
 			}}
 		>
 			<h1 className="shop-title">Shop</h1>
-			<div className="shop-container">
-				<Product addItemToCart={addItemToCart} />
-				<Product addItemToCart={addItemToCart} />
-				<Product addItemToCart={addItemToCart} />
-				<Product addItemToCart={addItemToCart} />
-				<Product addItemToCart={addItemToCart} />
-			</div>
+			<Product addItemToCart={addItemToCart} />
+			<Product addItemToCart={addItemToCart} />
+			<Product addItemToCart={addItemToCart} />
+			<Product addItemToCart={addItemToCart} />
+			<Product addItemToCart={addItemToCart} />
 		</div>
 	);
 };
