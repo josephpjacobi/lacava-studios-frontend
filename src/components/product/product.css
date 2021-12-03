@@ -9,8 +9,16 @@
 	flex-basis: 60%;
 	position: relative;
 	overflow: hidden;
-	margin: 20px;
+	margin: 15px;
 	padding: 20px;
+}
+
+.product-image {
+	border: 1px solid black;
+	height: 175px;
+	width: 175px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 /* TABLET DIMENTIONS */

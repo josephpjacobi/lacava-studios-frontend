@@ -17,7 +17,7 @@ export const NavBar = ({ setActiveTab, numberOfCarItems }: NavBarProps) => {
 				LaCava Studios
 			</h1>
 			<h3 className="nav-cart" onClick={() => setActiveTab("Cart")}>
-				Cart {numberOfCarItems}
+				Cart: {numberOfCarItems}
 			</h3>
 		</nav>
 	);
