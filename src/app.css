@@ -24,15 +24,24 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 10px;
 }
 
-.cart-section {
+.nav-menu {
+	flex-basis: 15%;
+	text-align: center;
+	font-size: 1em;
 }
 
-.cart-title {
+.main-logo {
+	flex-basis: 69%;
+	text-align: center;
 }
 
-.cart-container {
+.nav-cart {
+	flex-basis: 15%;
+	text-align: center;
+	font-size: 1em;
 }
 
 /* The values set in previous media queries will carry over into the next media query if they are not overriden */
@@ -43,9 +52,37 @@ body {
 /* for any screens that are 550px or wider (TABLET MEDIA QUERY) */
 /* TABLET DIMENTIONS */
 @media (min-width: 550px) {
+	.nav-menu {
+		flex-basis: 20%;
+		text-align: center;
+	}
+
+	.main-logo {
+		flex-basis: 59%;
+		text-align: center;
+	}
+
+	.nav-cart {
+		flex-basis: 20%;
+		text-align: center;
+	}
 }
 
 /* this is our media query for any screen thats 800px or wider (DESKTOP MEDIA QUERY) */
 /* DESKTOP DIMENTIONS */
 @media (min-width: 800px) {
+	.nav-menu {
+		flex-basis: 15%;
+		text-align: center;
+	}
+
+	.main-logo {
+		flex-basis: 69%;
+		text-align: center;
+	}
+
+	.nav-cart {
+		flex-basis: 15%;
+		text-align: center;
+	}
 }

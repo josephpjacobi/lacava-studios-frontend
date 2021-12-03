@@ -17,7 +17,7 @@
 }
 
 /* TABLET DIMENTIONS */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
 	.product {
 		flex-basis: 40%;
 	}

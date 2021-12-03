@@ -29,17 +29,17 @@ export default function App() {
 
 	return (
 		<div className="App">
-			<button
-				style={{ display: "none" }}
-				onClick={() => setCartItems([])}
-			></button>
 			<nav className="nav-bar">
-				<h1 onClick={() => setActiveTab("Shop Container")}>
+				<h3 className="nav-menu">Menu</h3>
+				<h1
+					className="main-logo"
+					onClick={() => setActiveTab("Shop Container")}
+				>
 					LaCava Studios
 				</h1>
-				<h1 onClick={() => setActiveTab("Cart")}>
+				<h3 className="nav-cart" onClick={() => setActiveTab("Cart")}>
 					Cart {cartItems.length}
-				</h1>
+				</h3>
 			</nav>
 			<ShopContainer
 				activeTab={activeTab}
