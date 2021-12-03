@@ -2,11 +2,17 @@
 
 .shop-section {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
+	flex-flow: column nowrap;
 	border: 1px solid black;
-	padding: 25px;
+	padding: 15px;
+	justify-content: center;
+}
+
+.products-display {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .shop-title {
@@ -17,8 +23,8 @@
 
 /* TABLET DIMENTIONS */
 @media screen and (min-width: 550px) {
-	.shop-container {
-		justify-content: space-evenly;
+	.products-display {
+		justify-content: flex-start;
 	}
 }
 

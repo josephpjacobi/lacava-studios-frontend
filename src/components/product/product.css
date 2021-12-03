@@ -4,16 +4,13 @@
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-	flex-basis: 90%;
 	border: 1px solid black;
 	border-radius: 10px;
-	margin: 5px;
-	padding: 0px 0px 5px 0px;
-}
-
-.product img {
-	flex-basis: 75%;
-	border-radius: 10px;
+	flex-basis: 60%;
+	position: relative;
+	overflow: hidden;
+	margin: 20px;
+	padding: 20px;
 }
 
 /* TABLET DIMENTIONS */
@@ -26,6 +23,6 @@
 /* DESKTOP DIMENTIONS */
 @media screen and (min-width: 800px) {
 	.product {
-		flex-basis: 20%;
+		flex-basis: 19%;
 	}
 }
