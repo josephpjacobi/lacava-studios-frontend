@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavBar } from "./components/nav-bar/nav-bar";
 import { ShopContainer } from "./components/shop-container/shop-container";
 import { CartContainer } from "./components/cart-container/cart-container";
 import "./app.css";
@@ -29,18 +30,10 @@ export default function App() {
 
 	return (
 		<div className="App">
-			<nav className="nav-bar">
-				<h3 className="nav-menu">Menu</h3>
-				<h1
-					className="main-logo"
-					onClick={() => setActiveTab("Shop Container")}
-				>
-					LaCava Studios
-				</h1>
-				<h3 className="nav-cart" onClick={() => setActiveTab("Cart")}>
-					Cart {cartItems.length}
-				</h3>
-			</nav>
+			<NavBar
+				setActiveTab={setActiveTab}
+				numberOfCarItems={cartItems.length}
+			/>
 			<ShopContainer
 				activeTab={activeTab}
 				addItemToCart={addItemToCart}
