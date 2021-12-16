@@ -49,11 +49,17 @@ export default function App() {
 		setCartItems(updatedCart);
 	}
 
+	function countCartItems(cartItems: CartItem[]): number {
+		return cartItems.reduce(function (acc, obj) {
+			return acc + obj.quantity;
+		}, 0);
+	}
+
 	return (
 		<div className="App">
 			<NavBar
 				setActiveTab={setActiveTab}
-				numberOfCarItems={cartItems.length}
+				numberOfCarItems={countCartItems(cartItems)}
 			/>
 			<ShopContainer
 				activeTab={activeTab}
