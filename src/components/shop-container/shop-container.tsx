@@ -5,13 +5,11 @@ import "./shop-container.css";
 
 interface ShopContainerProps {
 	activeTab: string;
-	// setCartItems: Dispatch<SetStateAction<CartItem[]>>;
 	addItemToCart: (itemToAdd: CartItem) => void;
 }
 
 export const ShopContainer = ({
 	activeTab,
-	// setCartItems,
 	addItemToCart,
 }: ShopContainerProps) => {
 	return (
@@ -23,11 +21,12 @@ export const ShopContainer = ({
 		>
 			<h1 className="shop-title">Shop</h1>
 			<div className="products-display">
-				<Product addItemToCart={addItemToCart} />
-				<Product addItemToCart={addItemToCart} />
-				<Product addItemToCart={addItemToCart} />
-				<Product addItemToCart={addItemToCart} />
-				<Product addItemToCart={addItemToCart} />
+				<Product id={1} addItemToCart={addItemToCart} />
+				<Product id={2} addItemToCart={addItemToCart} />
+				<Product id={3} addItemToCart={addItemToCart} />
+				<Product id={4} addItemToCart={addItemToCart} />
+				<Product id={5} addItemToCart={addItemToCart} />
+				<Product id={6} addItemToCart={addItemToCart} />
 			</div>
 		</div>
 	);

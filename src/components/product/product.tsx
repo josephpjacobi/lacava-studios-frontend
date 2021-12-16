@@ -3,10 +3,11 @@ import { CartItem } from "../../app";
 import "./product.css";
 
 interface ProductProps {
+	id: number;
 	addItemToCart: (itemToAdd: CartItem) => void;
 }
 
-export const Product = ({ addItemToCart }: ProductProps) => {
+export const Product = ({ id, addItemToCart }: ProductProps) => {
 	return (
 		<div className="product">
 			<div
@@ -23,7 +24,7 @@ export const Product = ({ addItemToCart }: ProductProps) => {
 				type="button"
 				onClick={() =>
 					addItemToCart({
-						id: 1,
+						id: id,
 						description: "new product!",
 						quantity: 1,
 					})
