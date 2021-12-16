@@ -9,16 +9,6 @@ interface CartContainerProps {
 	removeItemFromCart: (itemToRemove: CartItem) => void;
 }
 
-const items = [
-	{ id: 1, description: "test product 1" },
-	{ id: 2, description: "test product 2" },
-	{ id: 3, description: "test product 3" },
-	{ id: 4, description: "test product 4" },
-	{ id: 5, description: "test product 5" },
-];
-
-console.log(items);
-
 export const CartContainer = ({
 	activeTab,
 	cartItems,

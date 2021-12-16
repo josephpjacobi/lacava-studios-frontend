@@ -20,11 +20,25 @@ export default function App() {
 		{ id: 5, description: "test product 5", quantity: 1 },
 	]);
 
-	// need to add quantity to cart item type and to quantity when same item is added
 	function addItemToCart(itemToAdd: CartItem) {
 		const copyOfCartState = [...cartItems];
-		copyOfCartState.push(itemToAdd);
-		setCartItems(copyOfCartState);
+
+		function checkCartItems(item: CartItem): boolean {
+			return item.id === itemToAdd.id;
+		}
+
+		if (copyOfCartState.some(checkCartItems)) {
+			const updatedState = copyOfCartState.map((cartItem) => {
+				if (cartItem.id === itemToAdd.id) {
+					cartItem.quantity = cartItem.quantity + itemToAdd.quantity;
+				}
+				return cartItem;
+			});
+			setCartItems(updatedState);
+		} else {
+			copyOfCartState.push(itemToAdd);
+			setCartItems(copyOfCartState);
+		}
 	}
 
 	function removeItemFromCart(itemToRemove: CartItem) {

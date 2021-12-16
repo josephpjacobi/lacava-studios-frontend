@@ -15,7 +15,7 @@ export const CartItemDisplay = ({
 	return (
 		<div className="cart-item-container">
 			<h3>Name: Product Name</h3>
-			<h5>Quantity: Quantity</h5>
+			<h5>Quantity: {cartItem.quantity}</h5>
 			<p>{cartItem.description}</p>
 			<button onClick={() => removeItemFromCart(cartItem)}>Remove</button>
 		</div>
