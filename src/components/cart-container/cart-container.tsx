@@ -6,6 +6,7 @@ import "./cart-container.css";
 interface CartContainerProps {
 	activeTab: string;
 	cartItems: Array<CartItem>;
+	removeItemFromCart: (itemToRemove: CartItem) => void;
 }
 
 const items = [
@@ -18,7 +19,11 @@ const items = [
 
 console.log(items);
 
-export const CartContainer = ({ activeTab, cartItems }: CartContainerProps) => {
+export const CartContainer = ({
+	activeTab,
+	cartItems,
+	removeItemFromCart,
+}: CartContainerProps) => {
 	return (
 		<div
 			className="cart-section"
@@ -35,8 +40,8 @@ export const CartContainer = ({ activeTab, cartItems }: CartContainerProps) => {
 						return (
 							<CartItemDisplay
 								key={cartItem.id}
-								id={cartItem.id}
-								description={cartItem.description}
+								cartItem={cartItem}
+								removeItemFromCart={removeItemFromCart}
 							/>
 						);
 					})

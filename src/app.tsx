@@ -28,6 +28,14 @@ export default function App() {
 		setCartItems(copyOfCartState);
 	}
 
+	function removeItemFromCart(itemToRemove: CartItem) {
+		const copyOfCartState = [...cartItems];
+		const updatedCart: CartItem[] = copyOfCartState.filter(
+			(item) => item.id !== itemToRemove.id
+		);
+		setCartItems(updatedCart);
+	}
+
 	return (
 		<div className="App">
 			<NavBar
@@ -40,7 +48,11 @@ export default function App() {
 				// setCartItems={setCartItems}
 				// addItemToCart={addItemToCart}
 			/>
-			<CartContainer activeTab={activeTab} cartItems={cartItems} />
+			<CartContainer
+				activeTab={activeTab}
+				cartItems={cartItems}
+				removeItemFromCart={removeItemFromCart}
+			/>
 		</div>
 	);
 }
