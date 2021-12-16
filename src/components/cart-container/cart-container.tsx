@@ -14,6 +14,12 @@ export const CartContainer = ({
 	cartItems,
 	removeItemFromCart,
 }: CartContainerProps) => {
+	function calculateTotalCost(itemsInCart: CartItem[]): number {
+		return itemsInCart.reduce(function (acc, current) {
+			return acc + current.price;
+		}, 0);
+	}
+
 	return (
 		<div
 			className="cart-section"
@@ -37,7 +43,7 @@ export const CartContainer = ({
 					})
 				)}
 				<div className="checkout-section">
-					<h4>Total: TOTAL</h4>
+					<h4>Total: ${calculateTotalCost(cartItems) / 100}</h4>
 					<button>Checkout</button>
 				</div>
 			</div>

@@ -21,12 +21,12 @@ export const ShopContainer = ({
 		>
 			<h1 className="shop-title">Shop</h1>
 			<div className="products-display">
-				<Product id={1} addItemToCart={addItemToCart} />
-				<Product id={2} addItemToCart={addItemToCart} />
-				<Product id={3} addItemToCart={addItemToCart} />
-				<Product id={4} addItemToCart={addItemToCart} />
-				<Product id={5} addItemToCart={addItemToCart} />
-				<Product id={6} addItemToCart={addItemToCart} />
+				<Product id={1} price={1000} addItemToCart={addItemToCart} />
+				<Product id={2} price={2000} addItemToCart={addItemToCart} />
+				<Product id={3} price={3000} addItemToCart={addItemToCart} />
+				<Product id={4} price={4000} addItemToCart={addItemToCart} />
+				<Product id={5} price={5000} addItemToCart={addItemToCart} />
+				<Product id={6} price={6000} addItemToCart={addItemToCart} />
 			</div>
 		</div>
 	);

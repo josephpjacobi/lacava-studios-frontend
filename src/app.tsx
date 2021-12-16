@@ -8,16 +8,17 @@ export interface CartItem {
 	id: number;
 	description: string;
 	quantity: number;
+	price: number;
 }
 
 export default function App() {
 	const [activeTab, setActiveTab] = useState("Shop Container");
 	const [cartItems, setCartItems] = useState<Array<CartItem>>([
-		{ id: 1, description: "test product 1", quantity: 1 },
-		{ id: 2, description: "test product 2", quantity: 1 },
-		{ id: 3, description: "test product 3", quantity: 1 },
-		{ id: 4, description: "test product 4", quantity: 1 },
-		{ id: 5, description: "test product 5", quantity: 1 },
+		{ id: 1, description: "test product 1", quantity: 1, price: 1000 },
+		{ id: 2, description: "test product 2", quantity: 1, price: 2000 },
+		{ id: 3, description: "test product 3", quantity: 1, price: 3000 },
+		{ id: 4, description: "test product 4", quantity: 1, price: 4000 },
+		{ id: 5, description: "test product 5", quantity: 1, price: 5000 },
 	]);
 
 	function addItemToCart(itemToAdd: CartItem) {
@@ -73,6 +74,3 @@ export default function App() {
 		</div>
 	);
 }
-
-// Cart Component
-// Cart Item Component

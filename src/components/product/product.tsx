@@ -4,10 +4,11 @@ import "./product.css";
 
 interface ProductProps {
 	id: number;
+	price: number;
 	addItemToCart: (itemToAdd: CartItem) => void;
 }
 
-export const Product = ({ id, addItemToCart }: ProductProps) => {
+export const Product = ({ id, price, addItemToCart }: ProductProps) => {
 	return (
 		<div className="product">
 			<div
@@ -19,7 +20,7 @@ export const Product = ({ id, addItemToCart }: ProductProps) => {
 				}}
 			></div>
 			<p>Product 1 Name</p>
-			<p>$500</p>
+			<p>${price / 100}</p>
 			<button
 				type="button"
 				onClick={() =>
@@ -27,6 +28,7 @@ export const Product = ({ id, addItemToCart }: ProductProps) => {
 						id: id,
 						description: "new product!",
 						quantity: 1,
+						price: price,
 					})
 				}
 			>
