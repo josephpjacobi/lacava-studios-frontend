@@ -7,21 +7,20 @@ import "./app.css";
 export interface CartItem {
 	id: number;
 	description: string;
+	quantity: number;
 }
 
 export default function App() {
 	const [activeTab, setActiveTab] = useState("Shop Container");
 	const [cartItems, setCartItems] = useState<Array<CartItem>>([
-		{ id: 1, description: "test product 1" },
-		{ id: 2, description: "test product 2" },
-		{ id: 3, description: "test product 3" },
-		{ id: 4, description: "test product 4" },
-		{ id: 5, description: "test product 5" },
+		{ id: 1, description: "test product 1", quantity: 1 },
+		{ id: 2, description: "test product 2", quantity: 1 },
+		{ id: 3, description: "test product 3", quantity: 1 },
+		{ id: 4, description: "test product 4", quantity: 1 },
+		{ id: 5, description: "test product 5", quantity: 1 },
 	]);
 
-	// function handleCartItems(cartItemToAddOrRemove: CartItem, ) {
-	// 	const copyOfCartState = { ...cartItems };
-	// }
+	// need to add quantity to cart item type and to quantity when same item is added
 	function addItemToCart(itemToAdd: CartItem) {
 		const copyOfCartState = [...cartItems];
 		copyOfCartState.push(itemToAdd);
@@ -45,8 +44,6 @@ export default function App() {
 			<ShopContainer
 				activeTab={activeTab}
 				addItemToCart={addItemToCart}
-				// setCartItems={setCartItems}
-				// addItemToCart={addItemToCart}
 			/>
 			<CartContainer
 				activeTab={activeTab}

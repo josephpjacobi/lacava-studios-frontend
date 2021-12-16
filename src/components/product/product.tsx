@@ -22,7 +22,11 @@ export const Product = ({ addItemToCart }: ProductProps) => {
 			<button
 				type="button"
 				onClick={() =>
-					addItemToCart({ id: 1, description: "new product!" })
+					addItemToCart({
+						id: 1,
+						description: "new product!",
+						quantity: 1,
+					})
 				}
 			>
 				Add to Cart
